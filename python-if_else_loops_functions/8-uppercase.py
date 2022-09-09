@@ -6,10 +6,11 @@ def islower(c):
     else:
         return False
 
+
 def uppercase(str):
     upper = ''
     for i in str:
         if islower(i):
-            i =  chr(ord(i) - 32)
+            i = chr(ord(i) - 32)
         print('{}'.format(i), end='')
     print('')
