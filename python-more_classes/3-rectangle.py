@@ -26,7 +26,7 @@ class Rectangle:
             for j in range(self.width):
                 print_rec += '#'
             print_rec += '\n'
-        temp = print_rec[:-1] #print(temp) to delete last element (\n)
+        temp = print_rec[:-1]
         return temp
 
     @property
