@@ -1,4 +1,4 @@
 #!/usr/bin/python3
-a = (1, )
-if isinstance(a, tuple):
-    print('tuple')
+a = (1)
+b = (1)
+a is b
