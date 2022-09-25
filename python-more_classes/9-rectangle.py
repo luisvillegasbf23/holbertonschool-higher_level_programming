@@ -49,9 +49,6 @@ class Rectangle:
             raise TypeError('rect_2 must be an instance of Rectangle')
         if rect_1.area() == rect_2.area() or rect_1.area() > rect_2.area():
             return rect_1
-    @classmethod
-    def square(cls, size=0):
-        return cls(size, size)
 
     @property
     def width(self):
@@ -80,3 +77,7 @@ class Rectangle:
             raise ValueError('height must be >= 0')
         else:
             self.__height = value
+
+    @classmethod
+    def square(cls, size=0):
+        return cls(size, size)
