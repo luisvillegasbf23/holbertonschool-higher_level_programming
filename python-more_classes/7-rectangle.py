@@ -5,30 +5,31 @@
 class Rectangle:
     ''' init  '''
     number_of_instances = 0
+
     print_symbol = '#'
 
     def __init__(self, width=0, height=0):
-        self.width = width
-        self.height = height
+        self.__width = width
+        self.__height = height
         Rectangle.number_of_instances += 1
 
     def area(self):
-        return self.width * self.height
+        return self.__width * self.__height
 
     def perimeter(self):
-        if self.width == 0 or self.height == 0:
+        if self.__width == 0 or self.__height == 0:
             return 0
         else:
-            x = (self.width * 2) + (self.height * 2)
+            x = (self.__width * 2) + (self.__height * 2)
             return x
 
     def __str__(self):
         print_rec = ''
-        if self.width == 0 or self.height == 0:
+        if self.__width == 0 or self.__height == 0:
             return ''
-        for i in range(self.height):
-            for j in range(self.width):
-                print_rec += '#'
+        for i in range(self.__height):
+            for j in range(self.__width):
+                print_rec += str(self.print_symbol)
             print_rec += '\n'
         temp = print_rec[:-1]
         return temp
