@@ -4,7 +4,13 @@
 
 def is_same_class(obj, a_class):
     ''' function  '''
-    if not isinstance(obj, a_class):
+    if type(obj) == bool:
         return False
-    else:
+    if type(obj) is None:
+        return False
+    if type(obj) == list:
+        return False
+    if isinstance(obj, a_class):
         return True
+    else:
+        return False
