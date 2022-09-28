@@ -50,3 +50,18 @@ TypeError: list expected at most 1 argument, got 2
 
 -------------------------------------------------------------------------------
 
+>>> MyList.print_sorted(['x', 1])
+Traceback (most recent call last):
+...
+TypeError: '<' not supported between instances of 'int' and 'str'
+
+>>> list = MyList()
+
+>>> list.append(0)
+
+>>> list.append(1)
+
+>>> list.print_sorted()
+[0, 1]
+
+
