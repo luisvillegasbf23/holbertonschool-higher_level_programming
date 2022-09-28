@@ -1,112 +1,52 @@
-IMPORTING MODULE
-	>>> module = __import__('7-base_geometry')
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+    >>> bgeo = BaseGeometry()
 
-IMPORTING FUNCTION
-	>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+    >>> bgeo("test")
+    Traceback (most recent call last):
+    TypeError: 'BaseGeometry' object is not callable
 
-CHECKING CREATE INSTANCE
-	>>> bg = BaseGeometry()
+    >>> bgeo.area()
+    Traceback (most recent call last):
+    Exception: area() is not implemented
 
-CHECKING DOCSTRING MODULE
-	>>> len(module.__doc__) > 1
-	True
+    >>> bgeo.integer_validator("name", "John")
+    Traceback (most recent call last):
+    TypeError: name must be an integer
 
-CHECKING DOCSTRING FUNCTION
-	>>> len(BaseGeometry.__doc__) > 1
-	True
+    >>> bgeo.integer_validator("test", -1)
+    Traceback (most recent call last):
+    ValueError: test must be greater than 0
 
-CHECKING TWO STRING
-	>>> bg.integer_validator("name", "John")
-	Traceback (most recent call last):
-	...
-	TypeError: name must be an integer
+    >>> bgeo.integer_validator()
+    Traceback (most recent call last):
+    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
 
-CHECKING STRING INTEGER
-        >>> bg.integer_validator("name", 2)
+    >>> bgeo.integer_validator("age")
+    Traceback (most recent call last):
+    TypeError: integer_validator() missing 1 required positional argument: 'value'
 
-CHECKING INT AND STRING
-	>>> bg.integer_validator(2, 2)
+    >>> bgeo.integer_validator("age", 1)
 
-CHECKING AREA
-	>>> bg.area()
-	Traceback (most recent call last):
-	...
-	Exception: area() is not implemented
+    >>> bgeo.integer_validator("age", 0)
+    Traceback (most recent call last):
+    ValueError: age must be greater than 0
 
-CHECKING BOOLEAN
-	>>> bg.integer_validator(True, 2)
+    >>> bgeo.integer_validator("age", (4,))
+    Traceback (most recent call last):
+    TypeError: age must be an integer
 
-CHECKING BOOLEAN
-	>>> bg.integer_validator("name", True)
-	Traceback (most recent call last):
-	...
-	TypeError: name must be an integer
+    >>> bgeo.integer_validator("age", [3])
+    Traceback (most recent call last):
+    TypeError: age must be an integer
 
-CHECKING INTEGER == 0
-	>>> bg.integer_validator("name", 0)
-	Traceback (most recent call last):
-	...
-	ValueError: name must be greater than 0
+    >>> bgeo.integer_validator("age", True)
+    Traceback (most recent call last):
+    TypeError: age must be an integer
 
-CHECKING INTEGER < 0
-	>>> bg.integer_validator("name", 0)
-        Traceback (most recent call last):
-        ...
-        ValueError: name must be greater than 0
+    >>> bgeo.integer_validator("age", {3, 4})
+    Traceback (most recent call last):
+    TypeError: age must be an integer
 
-CHECKING EMPTY 
-	>>> bg.integer_validator()
-	Traceback (most recent call last):
-	...
-	TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
-
-CHECKING None
-	>>> bg.integer_validator(None, None)
-	Traceback (most recent call last):
-	...
-	TypeError: None must be an integer
-
-CHECKING A STRING
-	>>> bg.integer_validator("one")
-	Traceback (most recent call last):
-	...
-	TypeError: integer_validator() missing 1 required positional argument: 'value'
-
-CHECKING NO INT
-	>>> bg.integer_validator("test", (5, 7))
-	Traceback (most recent call last):
-	...
-	TypeError: test must be an integer
-
-CHECKINH EMPTY STRING
-	>>> bg.integer_validator("", 1)
-
-CHECKING AREA FAIL
-	>>> bg.area(1)
-	Traceback (most recent call last):
-        ...
-	TypeError: area() takes 1 positional argument but 2 were given
-
-CHECKING DICT
-	>>> bg.integer_validator("dict", {"key": "value"})
-	Traceback (most recent call last):
-        ...
-        TypeError: dict must be an integer
-
-CHECKING SET
-	>>> bg.integer_validator("set", {"hello", "world"})
-        Traceback (most recent call last):
-        ...
-        TypeError: set must be an integer
-
-CHECKING MANY ARGMENTS
-	>>> bg.integer_validator("more", 1, 2)
-	Traceback (most recent call last):
-        ...
-	TypeError: integer_validator() takes 3 positional arguments but 4 were given
-
-CHECKING LIST
-	>>> bg.integer_validator("list", [1, 2])
-	Traceback (most recent call last):
-        ...
-        TypeError: list must be an integer
+    >>> bgeo.integer_validator("age", None)
+    Traceback (most recent call last):
+    TypeError: age must be an integer
