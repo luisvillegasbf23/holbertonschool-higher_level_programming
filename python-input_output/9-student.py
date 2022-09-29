@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-'''  '''
+'''  Student to JSON '''
 
 
 class Student:
@@ -10,4 +10,5 @@ class Student:
         self.age = age
 
     def to_json(self):
+        ''''''
         return self.__dict__
