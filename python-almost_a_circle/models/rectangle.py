@@ -33,16 +33,16 @@ class Rectangle(Base):
         ''' setters  '''
         @width.setter
         def width(self, value):
-            self.__width = value
+            self.width = value
 
         @height.setter
         def height(self, value):
-            self.__height = value
+            self.height = value
 
         @x.setter
         def x(self, value):
-            self.__x = value
+            self.x = value
 
         @y.setter
         def y(self, value):
-            self.__y = value
+            self.y = value
