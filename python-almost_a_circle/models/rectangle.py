@@ -4,45 +4,42 @@ from models.base import Base
 
 
 class Rectangle(Base):
-    ''' class  '''
+    """Rectangle Class"""
     def __init__(self, width, height, x=0, y=0, id=None):
-        ''' constructor  '''
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
         super().__init__(id)
 
-        ''' porperties  '''
-        @property
-        def width(self):
-            return self.__width
+    @property
+    def width(self):
+        return self.__width
 
-        @property
-        def height(self):
-            return self.__height
+    @property
+    def height(self):
+        return self.__height
 
-        @property
-        def x(self):
-            return self.__x
+    @property
+    def x(self):
+        return self.__x
 
-        @property
-        def y(self):
-            return self.__y
+    @property
+    def y(self):
+        return self.__y
 
-        ''' setters  '''
-        @width.setter
-        def width(self, value):
-            self.width = value
+    @width.setter
+    def width(self, value):
+        self.__width = value
 
-        @height.setter
-        def height(self, value):
-            self.height = value
+    @height.setter
+    def height(self, value):
+        self.__height = value
 
-        @x.setter
-        def x(self, value):
-            self.x = value
+    @x.setter
+    def x(self, value):
+        self.__x = value
 
-        @y.setter
-        def y(self, value):
-            self.y = value
+    @y.setter
+    def y(self, value):
+        self.__y = value
