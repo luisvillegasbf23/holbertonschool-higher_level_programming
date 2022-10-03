@@ -4,7 +4,7 @@ from models.base import Base
 
 
 class Rectangle(Base):
-    """Rectangle Class"""
+    ''' Rectangle class  '''
     def __init__(self, width, height, x=0, y=0, id=None):
         self.width = width
         self.height = height
@@ -48,14 +48,14 @@ class Rectangle(Base):
     def x(self, value):
         if type(value) is not int:
             raise TypeError("x must be an integer")
-        if value <= 0:
-            raise ValueError("x must be > 0")
+        if value < 0:
+            raise ValueError("x must be >= 0")
         self.__x = value
 
     @y.setter
     def y(self, value):
         if type(value) is not int:
             raise TypeError("y must be an integer")
-        if value <= 0:
-            raise ValueError("y must be > 0")
+        if value < 0:
+            raise ValueError("y must be >= 0")
         self.__y = value
