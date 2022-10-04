@@ -85,6 +85,7 @@ class Rectangle(Base):
         return (f'[Rectangle] ({self.id}) {x}/{y} - {w}/{h}')
 
     def update(self, *args):
+        ''' update  '''
         if args is not None:
             if args[0]:
                 self.id = args[0]
