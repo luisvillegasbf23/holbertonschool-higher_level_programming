@@ -115,6 +115,7 @@ class Rectangle(Base):
                     self.y = value
 
     def to_dictionary(self):
+        ''' to dict '''
         x = self.x
         y = self.y
         _id = self.id
