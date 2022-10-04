@@ -122,6 +122,6 @@ class Rectangle(Base):
         height = self.height
         width = self.width
 
-        my_dict = {'x': x, 'y': y, 'id': _id, 'height': height, 'width':height}
+        my_dict = {'x': x, 'y': y, 'id': _id, 'height': height, 'width': width}
 
         return my_dict
