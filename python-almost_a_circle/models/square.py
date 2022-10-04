@@ -11,5 +11,3 @@ class Square(Rectangle):
     def __str__(self):
         """prints the rectangle with his different attributes"""
         return f"[Square] ({self.id}) {self.x}/{self.y} - {self.width}"
-
-
