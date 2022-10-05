@@ -19,6 +19,6 @@ class Base:
     def to_json_string(list_dictionaries):
         ''' to json  '''
         if list_dictionaries is None:
-            return []
+            return "[]"
         temp = json.dumps(list_dictionaries)
         return temp
