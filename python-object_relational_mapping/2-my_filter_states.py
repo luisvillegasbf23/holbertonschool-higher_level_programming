@@ -22,7 +22,7 @@ if __name__ == "__main__":
 
     # exe query
     query = "SELECT * FROM states WHERE name"
-    query_part_two = f"LIKE BINARY '{ARG_WORD}' ORDER BY states.id ASC"
+    query_part_two = "LIKE BINARY '{}' ORDER BY states.id ASC".format(ARG_WORD)
 
     cursor.execute(f'{query} {query_part_two}')
 
