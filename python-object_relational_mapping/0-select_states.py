@@ -24,12 +24,8 @@ query = 'SELECT * FROM states ORDER BY id ASC'
 cursor.execute(query)
 
 # Fetch the results of a select
-res = cursor.fetchall() 
+res = cursor.fetchall()
 
 # print response
 for i in res:
     print(i)
-
-
-
-
