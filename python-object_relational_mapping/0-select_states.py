@@ -16,7 +16,7 @@ if __name__ == "__main__":
     # connect to db
     conn = MySQLdb.connect(*data)
 
-    #create cursor
+    # create cursor
     cursor = conn.cursor()
 
     # exe query
