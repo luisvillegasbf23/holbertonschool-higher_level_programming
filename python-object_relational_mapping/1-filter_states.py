@@ -20,10 +20,10 @@ if __name__ == "__main__":
     cursor = conn.cursor()
 
     # exe query
-    query = "SELECT * FROM states WHERE name
-    LIKE BINARY 'N%' ORDER BY states.id ASC"
+    query = "SELECT * FROM states WHERE name"
+    query_part_two = "LIKE BINARY 'N%' ORDER BY states.id ASC"
 
-    cursor.execute(query)
+    cursor.execute(f'{query} {query_part_two}')
 
     # Fetch the results of a select
     res = cursor.fetchall()
