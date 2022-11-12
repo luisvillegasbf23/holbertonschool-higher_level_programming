@@ -11,6 +11,7 @@ DB_HOST = 'localhost'
 DB_USER = arg[1]
 DB_PASS = arg[2]
 DB_NAME = arg[3]
+
 data = [DB_HOST, DB_USER, DB_PASS, DB_NAME]
 
 # connect to db
