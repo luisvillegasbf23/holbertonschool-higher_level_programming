@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Task 7 """
+""" prints the first State """
 
 from model_state import Base, State
 from sqlalchemy import create_engine
@@ -17,7 +17,9 @@ if __name__ == '__main__':
             pool_pre_ping=True,
             echo=False
             )
-
     session = Session(engine)
-    for state in session.query(State).order_by(State.id).all():
+    state = session.query(State).order_by(State.id).first()
+    if (state):
         print("{}: {}".format(state.id, state.name))
+    else:
+        print("Nothing")
