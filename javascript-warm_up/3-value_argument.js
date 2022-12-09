@@ -10,4 +10,3 @@ if (count > 2) {
 } else {
   console.log('No argument');
 }
-
