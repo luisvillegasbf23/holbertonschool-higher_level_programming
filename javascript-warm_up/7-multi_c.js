@@ -1,11 +1,10 @@
 #!/usr/bin/node
-//
-let integer = parseInt(process.argv[2]);
-if (Number.isInteger(integer)) {
-  while (integer > 0) {
-    console.log('C is fun');
-    integer--;
-  }
+// #!/usr/bin/env node
+const num = parseInt(process.argv[2]);
+if (!num) {
+  console.log('Missing number of occurences');
 } else {
-  console.log('Missing number of occurrences');
+  for (let i = num; i > 0; i -= 1) {
+    console.log('C is fun');
+  }
 }
