@@ -5,8 +5,10 @@
 const file = process.argv[2];
 const str = process.argv[3];
 const fs = require('fs');
-function bar (err, data) {
-  err ? console.log(err) : console.log(data);
+function bar (err) {
+  if(err){
+    console.log(err);
+  }
 }
 
 // (file, encoding, function)
