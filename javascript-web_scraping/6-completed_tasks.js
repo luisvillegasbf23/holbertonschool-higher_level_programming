@@ -5,7 +5,7 @@ const request = require('request');
 const URL = process.argv[2];
 
 function bar (err, resp, body) {
-   if (!err) {
+  if (!err) {
     const completed = {};
     const todos = JSON.parse(body);
     for (let i = 0; i < todos.length; i++) {
